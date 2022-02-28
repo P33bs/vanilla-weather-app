@@ -14,9 +14,115 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Hello World</h1>
-      <a href="" class="btn btn-primary">Click Here</a>
+    <div class="app">
+      <div class="container">
+        <div class="weather">
+          <a
+            href="https://www.shecodes.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="https://www.weather.shecodes.io/images/logo.png"
+              class="logo"
+              alt="SheCodes Logo"
+          /></a>
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                class="form-control search-input"
+              />
+            </div>
+            <div class="col-3 p-0">
+              <input
+                type="submit"
+                class="btn btn-primary w-100"
+                value="search"
+              />
+            </div>
+            <div class="WeatherInfo">
+              <div class="row">
+                <div class="col-6">
+                  <h1>New York</h1>
+                  <ul>
+                    <li>
+                      <span>Monday 12:59, clear sky</span>
+                    </li>
+                    <li>
+                      Humidity: <strong>20%</strong>, Wind: <strong>4.65km/h</strong>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6"><div class="temperature-container d-flex justify-content-end"></div>
+                <div>
+                  <span class="temperature">2</span>
+                  <span class="unit">°C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="WeatherForecast row">
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Mon</div>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">2°</span>
+                <span class="forecast-temperature-min">-3°</span>
+              </div>
+            </div>
+          </div> 
+           <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Tue</div>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">2°</span>
+                <span class="forecast-temperature-min">-3°</span>
+              </div>
+            </div>
+          </div>        
+           <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Wed</div>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">2°</span>
+                <span class="forecast-temperature-min">-3°</span>
+              </div>
+            </div>
+          </div>        
+           <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Thu</div>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">2°</span>
+                <span class="forecast-temperature-min">-3°</span>
+              </div>
+            </div>
+          </div>        
+           <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Fri</div>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">2°</span>
+                <span class="forecast-temperature-min">-3°</span>
+              </div>
+            </div>
+          </div>        
+           <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-time">Sat</div>
+              <div class="forecast-temperature">
+                <span class="forecast-temperature-max">2°</span>
+                <span class="forecast-temperature-min">-3°</span>
+              </div>
+            </div>
+          </div>               
+        </div>
+        <footer>
+          This project was coded by Paige Barclay and is open-sourced on Github and <a href="https://nostalgic-clarke-571f5f.netlify.app/" target="_blank" rel="noopener noreferrer">hosted on Netlify</a>
+        </footer>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
