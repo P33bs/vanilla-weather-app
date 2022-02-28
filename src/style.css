@@ -11,10 +11,7 @@ form {
 
 h1 {
   margin: 20px 0 10px 0;
-  line-height: 29px;
   font-weight: bold;
-  font-size: 38px;
-  line-height: 48px;
   color: #272142;
 }
 
@@ -52,6 +49,18 @@ footer a {
 .App {
   max-width: 800px;
   margin: 60px auto;
+}
+
+.heading {
+  max-width: 150px;
+  display: block;
+  font-size: 24px;
+}
+
+.city {
+  line-height: 29px;
+  font-size: 38px;
+  line-height: 48px;
 }
 
 .weather {
