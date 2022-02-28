@@ -1,3 +1,32 @@
+body {
+  background: #f9f7fe;
+}
+
 h1 {
   color: blueviolet;
+}
+
+.app {
+  display: block;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.weather {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgb(65, 50, 100 / 8%);
+  padding: 40px;
+  color: #878787;
+}
+
+.WeatherInfo {
+  margin-top: 20px;
+}
+
+.WeatherForecast {
+  text-align: center;
+  margin: 40px 0;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 50px;
 }
