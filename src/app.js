@@ -1,27 +1,25 @@
-let now = new Date();
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-document.querySelector("#currentday").innerHTML = `${day}`;
-
-let hour = now.getHours();
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hour}:${minutes}`;
 }
-
-let time = `${hour}:${minutes}`;
-
-document.querySelector("#time").innerHTML = `${time}`;
 
 function showWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -36,9 +34,12 @@ function showWeather(response) {
   );
   document.querySelector("#current-condition").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 let apiKey = "5b927689c93c4cd55544a76cdf201c07";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Calgary&units=metric&appid=${apiKey}`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Edmonton&units=metric&appid=${apiKey}`;
 
 axios.get(`${apiUrl}`).then(showWeather);
