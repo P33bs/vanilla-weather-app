@@ -107,6 +107,7 @@ a:hover {
   font-weight: normal;
   position: relative;
   line-height: 1.5;
+  top: -24px;
 }
 
 .unit a {
