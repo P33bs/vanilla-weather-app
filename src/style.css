@@ -57,7 +57,6 @@ a:hover {
 .city {
   line-height: 29px;
   font-size: 38px;
-  line-height: 48px;
 }
 
 .weather {
@@ -94,11 +93,9 @@ a:hover {
 }
 
 .temperature {
-  font-weight: bold;
   color: #353132;
+  display: inline-block;
   margin-left: 5px;
-  font-weight: 400;
-  margin-left: 10px;
   font-weight: bold;
   font-size: 80px;
   line-height: 1;
@@ -110,7 +107,6 @@ a:hover {
   font-size: 16px;
   font-weight: bold;
   position: relative;
-  line-height: 1.5;
   top: -34px;
 }
 
