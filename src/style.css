@@ -102,12 +102,11 @@ a:hover {
 
 .unit {
   color: #353132;
-  display: inline-block;
   font-size: 16px;
   font-weight: bold;
   position: relative;
   line-height: 1.5;
-  top: -20px;
+  top: -34px;
 }
 
 .unit a {

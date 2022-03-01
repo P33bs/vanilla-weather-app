@@ -12,7 +12,7 @@
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="dist/wu-icons-style.css">
+    <link rel="stylesheet" href="dist/wu-icons-style.css" />
     <title>Weather App</title>
   </head>
   <body>
@@ -23,12 +23,12 @@
           <div class="row">
             <div class="col-9">
               <form id="search-form">
-              <input
-                type="search"
-                placeholder="Enter a city..."
-                class="form-control search-input"
-                autocomplete="off"
-              />
+                <input
+                  type="search"
+                  placeholder="Enter a city..."
+                  class="form-control search-input"
+                  autocomplete="off"
+                />
               </form>
             </div>
             <div class="col-3 p-0">
@@ -43,20 +43,27 @@
                 <div class="col-6">
                   <h1 id="city">New York</h1>
                   <ul>
+                    <li>Last updated: <span id="date">Monday 12:59</span></li>
                     <li>
-                    Last updated: <span id="date">Monday 12:59</span> 
+                      Current Conditions:
+                      <span id="current-condition">Clear</span>
                     </li>
-                     <li>Current Conditions: <span id="current-condition">Clear</span></li>
-                    <li>
-                      Humidity: <span id="humidity">20</span>% 
-                    </li>
+                    <li>Humidity: <span id="humidity">20</span>%</li>
                     <li>Wind: <span id="wind">4.65</span> km/h</li>
                   </ul>
                 </div>
-                <div class="col-6"><div class="temperature-container d-flex justify-content-end"></div>
-                <div>
-                  <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon"><span class="temperature">2</span>
-                  <span class="unit"><a href="#" class="active" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
+                <div class="col-6">
+                  <div
+                    class="temperature-container d-flex justify-content-center"
+                  ></div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    id="icon"
+                  /><span class="temperature">2</span>
+                  <span class="unit"
+                    ><a href="#" class="active" id="celsius">°C</a> |
+                    <a href="#" id="fahrenheit">°F</a></span
+                  >
                 </div>
               </div>
             </div>
@@ -72,8 +79,8 @@
                 <span class="forecast-temperature-min">-3°</span>
               </div>
             </div>
-          </div> 
-           <div class="col">
+          </div>
+          <div class="col">
             <div class="WeatherForecastPreview">
               <div class="forecast-time">Tue</div>
               <i class="wu wu-black wu-32 wu-cloudy"></i>
@@ -82,8 +89,8 @@
                 <span class="forecast-temperature-min">-3°</span>
               </div>
             </div>
-          </div>        
-           <div class="col">
+          </div>
+          <div class="col">
             <div class="WeatherForecastPreview">
               <div class="forecast-time">Wed</div>
               <i class="wu wu-black wu-32 wu-rain"></i>
@@ -92,8 +99,8 @@
                 <span class="forecast-temperature-min">-3°</span>
               </div>
             </div>
-          </div>        
-           <div class="col">
+          </div>
+          <div class="col">
             <div class="WeatherForecastPreview">
               <div class="forecast-time">Thu</div>
               <i class="wu wu-black wu-32 wu-rain"></i>
@@ -102,8 +109,8 @@
                 <span class="forecast-temperature-min">-3°</span>
               </div>
             </div>
-          </div>        
-           <div class="col">
+          </div>
+          <div class="col">
             <div class="WeatherForecastPreview">
               <div class="forecast-time">Fri</div>
               <i class="wu wu-black wu-32 wu-partlycloudy"></i>
@@ -112,10 +119,23 @@
                 <span class="forecast-temperature-min">-3°</span>
               </div>
             </div>
-          </div>        
+          </div>
         </div>
         <footer>
-          This project was coded by Paige Barclay and is <a href="https://github.com/P33bs/vanilla-weather-app" target="_blank" rel="noopener noreferrer">open-sourced on Github</a> and <a href="https://nostalgic-clarke-571f5f.netlify.app/" target="_blank" rel="noopener noreferrer">hosted on Netlify</a>
+          This project was coded by Paige Barclay and is
+          <a
+            href="https://github.com/P33bs/vanilla-weather-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            >open-sourced on Github</a
+          >
+          and
+          <a
+            href="https://nostalgic-clarke-571f5f.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >hosted on Netlify</a
+          >
         </footer>
       </div>
     </div>
