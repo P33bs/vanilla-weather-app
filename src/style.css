@@ -106,6 +106,7 @@ a:hover {
 
 .unit {
   color: #353132;
+  display: inline-block;
   font-size: 16px;
   font-weight: bold;
   position: relative;
