@@ -22,6 +22,16 @@ function formatDate(timestamp) {
 }
 
 function showWeather(response) {
+  let weatherIcon = response.data.weather[0].icon;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].main);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector(".temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -40,6 +50,7 @@ function showWeather(response) {
 }
 
 let apiKey = "5b927689c93c4cd55544a76cdf201c07";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Edmonton&units=metric&appid=${apiKey}`;
+let city = "Edmonton";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
 axios.get(`${apiUrl}`).then(showWeather);

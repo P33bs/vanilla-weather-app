@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background: #ececec;
   font-family: "Cerebri-Sans", Helvetica, Arial, sans-serif;
 }
 
@@ -63,7 +63,7 @@ footer a {
 }
 
 .weather {
-  background: #ececec;
+  background: white;
   border-radius: 16px;
   box-shadow: 0px 30px 50px rgba(65, 50, 100, 0.08);
   padding: 40px;
