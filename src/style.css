@@ -1,12 +1,6 @@
 body {
-  background: #ececec;
+  background: whitesmoke;
   font-family: "Cerebri-Sans", Helvetica, Arial, sans-serif;
-}
-
-form {
-  margin-top: 40px;
-  border-bottom: 1px solid #ececec;
-  padding-bottom: 30px;
 }
 
 h1 {
@@ -71,7 +65,7 @@ footer a {
 }
 
 .search-input {
-  background: white;
+  background: whitesmoke;
   border: none;
   padding: 15px 20px;
   display: inline-block;

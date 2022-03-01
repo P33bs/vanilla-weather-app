@@ -49,8 +49,17 @@ function showWeather(response) {
   );
 }
 
-let apiKey = "5b927689c93c4cd55544a76cdf201c07";
-let city = "Edmonton";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+function search(city) {
+  let apiKey = "5b927689c93c4cd55544a76cdf201c07";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  axios.get(`${apiUrl}`).then(showWeather);
+}
 
-axios.get(`${apiUrl}`).then(showWeather);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector(".search-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
