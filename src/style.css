@@ -6,7 +6,7 @@ body {
 h1 {
   margin: 20px 0 10px 0;
   font-weight: bold;
-  color: #8e3b29;
+  color: #be5037;
 }
 
 ul {
@@ -36,7 +36,7 @@ footer {
 }
 
 a {
-  color: #8e3b29;
+  color: #be5037;
 }
 
 a:hover {
@@ -81,7 +81,7 @@ a:hover {
 }
 
 .btn {
-  background: #8e3b29;
+  background: #be5037;
   font-weight: bold;
   font-size: 16px;
   padding: 15px 0;
