@@ -21,7 +21,9 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minutes}`;
 }
 
-function showWeather(response) {
+function displayTemp(response) {
+  celsiusTemp = response.data.main.temp;
+
   let weatherIcon = response.data.weather[0].icon;
   document
     .querySelector("#icon")
@@ -33,9 +35,7 @@ function showWeather(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].main);
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector(".temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector(".temperature").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
@@ -52,7 +52,7 @@ function showWeather(response) {
 function search(city) {
   let apiKey = "5b927689c93c4cd55544a76cdf201c07";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  axios.get(`${apiUrl}`).then(showWeather);
+  axios.get(`${apiUrl}`).then(displayTemp);
 }
 
 function handleSubmit(event) {
@@ -61,5 +61,31 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitValue = (celsiusTemp * 9) / 5 + 32;
+  document.querySelector(".temperature").innerHTML =
+    Math.round(fahrenheitValue);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  document.querySelector(".temperature").innerHTML = Math.round(celsiusTemp);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsius);
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+search("Vancouver");

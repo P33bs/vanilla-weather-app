@@ -35,8 +35,12 @@ footer {
   color: #353132;
 }
 
-footer a {
+a {
   color: #8e3b29;
+}
+
+a:hover {
+  color: #353132;
 }
 
 .App {
@@ -106,6 +110,10 @@ footer a {
   top: -34px;
 }
 
+.unit a {
+  text-decoration: none;
+}
+
 .WeatherForecast {
   text-align: center;
   margin: 40px 0;
@@ -140,4 +148,10 @@ footer a {
 
 .temperature-container {
   margin-top: 30px;
+}
+
+.active {
+  color: #353132;
+  cursor: default;
+  text-decoration: none;
 }
