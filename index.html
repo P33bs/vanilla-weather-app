@@ -10,6 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <link rel="stylesheet" href="dist/wu-icons-style.css">
     <title>Weather App</title>
@@ -37,19 +38,19 @@
             <div class="WeatherInfo">
               <div class="row">
                 <div class="col-6">
-                  <h1 class="city">New York</h1>
+                  <h1 id="city">New York</h1>
                   <ul>
                     <li>
-                      <span>Monday 12:59, clear sky</span>
+                      <span id="currentday">Monday</span> <span id="time">12:59</span>, <span id="current-condition">Clear</span>
                     </li>
                     <li>
-                      Humidity: <strong>20%</strong>, Wind: <strong>4.65km/h</strong>
+                      Humidity: <strong><span id="humidity">20</span>%</strong>, Wind: <strong><span id="wind">4.65</span>km/h</strong>
                     </li>
                   </ul>
                 </div>
                 <div class="col-6"><div class="temperature-container d-flex justify-content-end"></div>
                 <div>
-                  <span class="temperature"><i class="wu wu-black wu-64 wu-clear"></i>2</span>
+                  <i class="wu wu-black wu-64 wu-clear"></i><span class="temperature">2</span>
                   <span class="unit">°C</span>
                 </div>
               </div>
