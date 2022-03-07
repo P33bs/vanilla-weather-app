@@ -81,6 +81,7 @@ a:hover {
 
 .btn {
   background: #be5037;
+  color: white;
   font-weight: bold;
   font-size: 16px;
   padding: 15px 0;
@@ -90,10 +91,7 @@ a:hover {
 
 .btn:hover {
   background: #353132;
-}
-
-.btn:visited {
-  background: #be5037;
+  color: white;
 }
 
 .temperature {
