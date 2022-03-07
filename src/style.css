@@ -92,6 +92,10 @@ a:hover {
   background: #353132;
 }
 
+.btn:visited {
+  background: #be5037;
+}
+
 .temperature {
   color: #353132;
   display: inline-block;
