@@ -104,33 +104,9 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitValue = (celsiusTemp * 9) / 5 + 32;
-  document.querySelector(".temperature").innerHTML =
-    Math.round(fahrenheitValue);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-function displayCelsius(event) {
-  event.preventDefault();
-  document.querySelector(".temperature").innerHTML = Math.round(celsiusTemp);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
-
 let apiKey = "5b927689c93c4cd55544a76cdf201c07";
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsius);
-
-let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 search("Vancouver");
