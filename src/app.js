@@ -21,6 +21,27 @@ function formatDate(timestamp) {
   return `${day} ${hour}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHtml = ``;
+  let forecastDays = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  forecastDays.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="col">
+    <div class="WeatherForecastPreview">
+      <div class="forecast-time">${day}</div>
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" id="icon"/>
+          <div class="forecast-temperature">
+            <span class="forecast-temperature-max">2°</span>
+             <span class="forecast-temperature-min">-3°</span>
+            </div>
+          </div>
+        </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
 function displayTemp(response) {
   celsiusTemp = response.data.main.temp;
 
@@ -89,3 +110,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 search("Vancouver");
+displayForecast();
